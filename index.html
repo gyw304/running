@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="GBK">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+	<title>奔跑游戏</title>
+    <style>
+        *{margin:0;padding:0}
+        html, body
+        {
+            -webkit-text-size-adjust:none;
+            overflow: hidden;
+            height:100%;
+        }
+    </style>
+    <script src="phaser.2.4.4.min.js"></script>
+    <script src="Boot.js"></script>
+    <script src="Preloader.js"></script>
+    <script src="MainMenu.js"></script>
+    <script src="Game.js"></script>
+    <script src="score.js"></script>
+    <script src="rank.js"></script>
+
+
+    <script>
+        var rank = 999;//排名
+
+        var j_rankInfo = [
+            {
+                "j_Ranking": "01",
+                "j_NickName": "王哈2了111133哈",
+                "j_UserHeader":'assets/fruit1.png',
+                'j_score':'50000.26米'
+            },
+            {
+                "j_Ranking": "02",
+                "j_NickName": "王哈了哈",
+                "j_UserHeader":'http://p4.gexing.com/G1/M00/CA/43/rBABFFHflSKimYo7AAAZiDG7IEk793_200x200_3.jpg',
+                'j_score':'65.89米'
+            }
+            ,
+            {
+                "j_Ranking": "03",
+                "j_NickName": "王哈了哈",
+                "j_UserHeader":'https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white_fe6da1ec.png',
+                'j_score':'300.70米'
+            }
+            ,
+            {
+                "j_Ranking": "04",
+                "j_NickName": "王哈了哈",
+                "j_UserHeader":'assets/fruit1.png',
+                'j_score':'125.88米'
+            }
+            ,
+            {
+                "j_Ranking": "05",
+                "j_NickName": "王哈了哈",
+                "j_UserHeader":'assets/fruit1.png',
+                'j_score':'145.79米'
+            },
+            {
+                "j_Ranking": "06",
+                "j_NickName": "王哈2了111133哈",
+                "j_UserHeader":'assets/fruit1.png',
+                'j_score':'50000.26米'
+            },
+            {
+                "j_Ranking": "07",
+                "j_NickName": "王哈了哈",
+                "j_UserHeader":'assets/fruit1.png',
+                'j_score':'65.89米'
+            }
+            ,
+            {
+                "j_Ranking": "08",
+                "j_NickName": "王哈了哈",
+                "j_UserHeader":'assets/fruit1.png',
+                'j_score':'300.70米'
+            },
+            {
+                "j_Ranking": "09",
+                "j_NickName": "王哈了哈",
+                "j_UserHeader":'assets/fruit1.png',
+                'j_score':'125.88米'
+            }
+            ,
+            {
+                "j_Ranking": "10",
+                "j_NickName": "王哈了哈",
+                "j_UserHeader":'assets/fruit1.png',
+                'j_score':'145.79米'
+            }
+        ];
+
+    </script>
+
+</head>
+<body style="background-color: #000">
+
+<script>
+    (function() {
+        var game = new Phaser.Game(750, 1206, Phaser.CANVAS, 'game');
+        game.state.add('Boot', MyGame.Boot);
+        game.state.add('Preloader', MyGame.Preloader);
+        game.state.add('MainMenu', MyGame.MainMenu);
+        game.state.add('Game', MyGame.Game);
+        game.state.add('score', MyGame.score);
+        game.state.add('rank', MyGame.rank);
+        game.state.start('Boot');
+    })();
+</script>
+<!--<script src="inpMusic.js"></script>-->
+</body>
+</html>
